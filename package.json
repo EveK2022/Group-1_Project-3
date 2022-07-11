@@ -4,7 +4,7 @@
   "description": "Supper Makan Apa?",
   "main": "index.js",
   "scripts": {
-    "start": "SET NODE_ENV=dev && nodemon index.js",
+    "start": "nodemon index.js",
     "test": "mocha --timeout 15000"
   },
   "repository": {

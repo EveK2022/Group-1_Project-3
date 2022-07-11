@@ -1,5 +1,5 @@
 const chai = require('chai');
-const server = "http://localhost:5000";
+const server = "http://localhost:3000";
 const chaiHttp = require('chai-http');
 const { describe } = require('mocha');
 const expect = require("chai").expect;
