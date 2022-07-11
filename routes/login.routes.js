@@ -9,7 +9,9 @@ const app = express();
 const cors = require('cors');
 const { Sequelize } = require("sequelize");
 const Op = Sequelize.Op;
+//const LoginController = require('../controllers/LoginController');
 
+//const loginController = new LoginController();
 
 app.use(cors());
 
@@ -28,6 +30,8 @@ router.get("/login/user", async (req, res) => {
   }
   return res.send("You have called a login route");
 });
+
+//router.post("/login/signup", loginController.create);
 
 router.post("/login/signup", async (req, res) => {
   const newUser = req.body;
@@ -111,10 +115,13 @@ router.post("/login/signin", async (req, res) => {
         email: user.email,
         accessToken: token,
       });
+      console.log(token)
     })
     .catch((err) => {
       res.status(500).send({ message: err.message });
     });
+
+  
 });
 
 
